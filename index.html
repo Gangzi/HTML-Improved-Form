@@ -15,15 +15,20 @@
         <form method="GET" action="results.html">
             <div>
                 <label for="firstname">Your First Name</label>
-                <input type="text" id="firstname" name="firstname">
+                <input type="text" id="firstname" name="firstname" minlength="2" maxlength="35"required>
                 <label for="lastname">Your Last Name</label>
-                <input type="text" id="lastname" name="lastname">
-            </div>
-            <fieldset>
+                <input type="text" id="lastname" name="lastname" minlength="2" maxlength="35" required>
+                <label for="age">Your Age</label>
+                <input required type="number" id="age" name="age" min="21" max="120">
+                <h5>Must be age 21 or older to enter the contest.</h5>
+                <label for="password">Your Password(must be 6 alphanumeric characters)</label>
+                <input type="password" id="password" name="password" pattern="[0-9a-zA-Z]{6}" title="6 Character Alphanumeric characters" required>
+            
+                <fieldset>
                 <legend>Your Contact Info</legend>
                 <div>
                     <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email" required>
                 </div>
                 <div>
                     <label for="address">Your Street Address</label>
@@ -86,7 +91,7 @@
                         <option value="WY">Wyoming</option>
                     </datalist>
                     <label for="zip">Your Zipcode</label>
-                    <input type="text" id="zip" name="zip">
+                    <input type="text" id="zip" name="zip" pattern="[0-9]{5}" title="5-Digit US Zip Code">
                 </div>
             </fieldset>
 
